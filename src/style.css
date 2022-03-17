@@ -1,0 +1,47 @@
+/* imported fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+/*general styles */
+* {
+  font-family: 'Ubuntu', 'Hubballi', sans-serif;
+  background-color: #1E1D1E;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header */
+.header {
+  text-align: center;
+  color: aliceblue;
+  text-shadow: 2px 2px 6px #895CC7;
+  font-size: 50px;
+  margin-top: 30px;
+}
+
+/* cards section */
+#root {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 60%;
+  margin: 50px auto;
+  padding: 50px;
+  gap: 35px;
+  /* outline: 2px solid red; */
+}
+
+/* styles for each card */
+.cardPokemon {
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  padding-top: 10px;
+  color: aliceblue;
+  border: solid #895CC7 2px;
+  border-radius: 3px;
+}
