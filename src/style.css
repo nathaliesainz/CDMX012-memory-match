@@ -21,27 +21,62 @@
   margin-top: 30px;
 }
 
-/* cards section */
-#root {
+/*styles for main container*/
+.mainSection {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 80%;
-  height: 60%;
+  height: 70%;
+  width: 60%;
   margin: 50px auto;
-  padding: 50px;
-  gap: 35px;
-  /* outline: 2px solid red; */
+  padding: 9px;
+  /* border: 2px solid red; */
 }
 
-/* styles for each card */
-.cardPokemon {
-  text-align: center;
+/*styles for cards container*/
+#root {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid green; */
+}
+
+/*styles for cards*/
+.cardContainer {
+  display: flex;
+  background-color: transparent;
   width: 180px;
   height: 180px;
+  perspective: 800px;
+  /* border: 2px solid pink; */
+}
+
+.innerCardPokemon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border: solid #895CC7 2px;
+}
+
+.cardContainer:hover .innerCardPokemon {
+  transform: rotateY(180deg);
+}
+
+.frontCardPokemon {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
   padding-top: 10px;
   color: aliceblue;
-  border: solid #895CC7 2px;
   border-radius: 3px;
+  backface-visibility: hidden;
+}
+
+.backCardPokemon {
+  padding-top: 35px;
 }
